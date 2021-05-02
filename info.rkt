@@ -1,6 +1,6 @@
 #lang info
 (define collection "circuit")
-(define deps '("base"))
+(define deps '("base" "gui-lib"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/circuit.scrbl" ())))
 (define pkg-desc "Description Here")

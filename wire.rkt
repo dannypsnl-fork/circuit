@@ -1,9 +1,13 @@
 #lang racket
 
+(provide make-wire
+         get-signal
+         set-signal!)
+
 (require framework/notify)
 
-(define (make-wire)
-  (new notify:notify-box% (value 'invalid)))
+(define (make-wire [v #f])
+  (new notify:notify-box% (value v)))
 
 (define (get-signal w)
   (send w get))

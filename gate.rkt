@@ -4,8 +4,7 @@
          or-gate
          and-gate)
 
-(require "wire.rkt"
-         framework/notify)
+(require "wire.rkt")
 
 (define (listen compute . rest)
   (for ([w rest])

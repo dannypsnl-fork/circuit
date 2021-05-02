@@ -4,10 +4,10 @@
          get-signal
          set-signal!)
 
-(require framework/notify)
+(require "notify-box.rkt")
 
 (define (make-wire [v 0])
-  (new notify:notify-box% (value v)))
+  (new notify-box% (value v)))
 
 (define (get-signal w)
   (send w get))

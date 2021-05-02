@@ -1,15 +1,15 @@
 #lang racket
 
-(module+ main
-  (require racket/cmdline)
+(require "wire.rkt"
+         "gate.rkt")
 
-  (define who (make-parameter "world"))
-  (command-line
-    #:program "circuit"
-    #:once-each
-    [("-n" "--name") name "Who to say hello to" (who name)]
-    #:args ()
-    (printf "hello ~a~n" (who))))
+(define (half-adder a b s c)
+  (let ([d (make-wire)]
+        [e (make-wire)])
+    (or-gate a b d)
+    (and-gate a b c)
+    (inverter c e)
+    (and-gate d e s)))
 
 (module+ test
   (require rackunit)

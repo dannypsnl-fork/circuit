@@ -1,4 +1,8 @@
 #lang racket
+(provide half-adder
+         full-adder
+         make-wire
+         get-signal)
 
 (require "wire.rkt"
          "gate.rkt")

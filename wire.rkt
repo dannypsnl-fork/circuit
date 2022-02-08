@@ -1,5 +1,4 @@
 #lang racket
-
 (provide make-wire
          get-signal
          set-signal!)

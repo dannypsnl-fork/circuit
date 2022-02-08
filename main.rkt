@@ -1,6 +1,11 @@
 #lang racket
 (provide half-adder
          full-adder
+         ; gates
+         and-gate
+         or-gate
+         inverter
+         ; wire
          make-wire
          get-signal)
 

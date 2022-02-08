@@ -35,6 +35,7 @@ jobs:
         run: |
           raco pkg install --auto
           make build
+          raco scribble ++main-xref-in --redirect-main http://docs.racket-lang.org/ --dest doc_build scribblings/circuit.scrbl
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

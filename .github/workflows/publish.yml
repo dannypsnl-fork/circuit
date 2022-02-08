@@ -25,12 +25,12 @@ jobs:
           path: |
             ~/.racket
           key: ${{ runner.os }}-primes
-      - uses: Bogdanp/setup-racket@v1.3.1
+      - uses: Bogdanp/setup-racket@v1.7
         with:
           architecture: 'x64'
           distribution: 'minimal'
           variant: 'CS'
-          version: '8.0'
+          version: 'stable'
       - name: Build
         run: |
           raco pkg install --auto
